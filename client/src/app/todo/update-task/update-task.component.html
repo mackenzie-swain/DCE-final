@@ -1,0 +1,24 @@
+<div>
+    <form>
+        <div class="form-group">
+            <label for="name">Task name:</label>
+            <input name="name" class="form-control" [ngModel]="task.name">
+            <br />
+            <label for="type">Type</label>
+            <select class="form-control" id="type" name="type" [(ngModel)]="task.type">
+                <option>Daily</option>
+                <option>Weekly</option>
+            </select>
+            <br />
+            <label for="assignee">Assignee task to:</label>
+            <input type="text" class="form-control" id="assignee" name="assignee" [(ngModel)]="task.assignee">
+            <br />
+            <label for="description">Description:</label>
+            <input name="description" class="form-control" [ngModel]="task.description">
+        </div>
+        <button type="submit" (click)="updateTask(task)" class="btn btn-dark">save</button>
+        <button type="button" routerLink="/" class="btn btn-dark">cancel</button>
+        <button type="button" class="btn btn-dark">delete this task</button>
+    </form>
+</div>
+ 

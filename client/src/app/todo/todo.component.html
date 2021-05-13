@@ -1,0 +1,22 @@
+<div class="to-do-container">
+
+    <a routerLink="/add" class="btn btn-info">Add a task</a>
+
+    <div *ngIf="showByType" id="showByType" class="list-group">
+         <h2>All Tasks</h2>
+        <div *ngFor="let task of allTasks">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ task.name }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ task.assignee }}</h6>
+                    <p class="card-text">{{ task.description }}
+                        <a routerLink="/update">Update</a>
+                    </p>
+                    <hr>
+                    <button type="button" class="btn-close" (click)="deleteTask(task._id)" aria-label="Close"></button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div> 

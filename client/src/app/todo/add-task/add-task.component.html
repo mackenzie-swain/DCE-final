@@ -1,0 +1,26 @@
+<div>
+    <h1 class="display-6">Add task to list</h1>
+    <form>
+        <div class="form-group">
+            <label for="name">Task name</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="task.name">
+        </div>
+        <div class="form-group">
+            <label for="type">Type</label>
+            <select class="form-control" id="type" name="type" [(ngModel)]="task.type">
+                <option>Daily</option>
+                <option>Weekly</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="assignee">Assignee task to:</label>
+            <input type="text" class="form-control" id="assignee" name="assignee" [(ngModel)]="task.assignee">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" rows="3" name="description" [(ngModel)]="task.description"></textarea>
+        </div>
+        <button type="submit" (click)="save()" class="btn btn-dark">Save</button>
+    </form>
+    <a class="btn btn-link" routerLink="/">Return to all tasks</a>
+</div>
